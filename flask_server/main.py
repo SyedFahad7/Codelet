@@ -9,11 +9,9 @@ def execute_code():
         data = request.json
         code = data['code']
 
-        # You can save the code to a file and then execute it
         with open('temp_code.py', 'w') as f:
             f.write(code)
 
-        # Run the python code
         result = subprocess.run(['python', 'temp_code.py'], capture_output=True, text=True)
         
         return jsonify({'output': result.stdout})
