@@ -65,7 +65,7 @@ class _PythonCompilerScreenState extends State<PythonCompilerScreen> {
     try {
       final response = await http.post(
         Uri.parse(
-            'http://192.168.1.169:5000/execute'), // Use your local IP here
+            'http://192.168.1.169:5000/execute'), // Using your local IP here
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'code': code}),
       );

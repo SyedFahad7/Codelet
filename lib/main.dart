@@ -9,6 +9,7 @@ void main() {
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: ThemeData(
               brightness:
                   themeProvider.isDarkMode ? Brightness.dark : Brightness.light,
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
     return Consumer<ThemeProvider>(
       builder: (context, themeProvider, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Python Compiler',
           theme: ThemeData(
             brightness:
